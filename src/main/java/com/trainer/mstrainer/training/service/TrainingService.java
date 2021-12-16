@@ -11,7 +11,10 @@ import java.util.UUID;
 public interface TrainingService {
 
     List<TrainingModel> findAll();
+
     Optional<TrainingModel> findById(UUID id);
+
     TrainingModel update(TrainingModel trainingModel);
+
     void delete(TrainingModel trainingModel);
 }

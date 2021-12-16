@@ -5,12 +5,17 @@ import com.trainer.mstrainer.training.repository.TrainingRepository;
 import com.trainer.mstrainer.training.service.TrainingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 @Service
 public class TrainingServiceImpl implements TrainingService {
+
+    public TrainingServiceImpl(TrainingRepository trainingRepository) {
+        this.trainingRepository = trainingRepository;
+    }
 
     @Autowired
     private TrainingRepository trainingRepository;
@@ -22,7 +27,7 @@ public class TrainingServiceImpl implements TrainingService {
 
     @Override
     public Optional<TrainingModel> findById(UUID id) {
-        return findById(id);
+        return trainingRepository.findById(id);
     }
 
     @Override

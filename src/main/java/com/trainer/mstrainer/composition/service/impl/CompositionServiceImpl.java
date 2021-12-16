@@ -16,6 +16,10 @@ public class CompositionServiceImpl implements CompositionService {
     @Autowired
     private CompositionRepository compositionRepository;
 
+    public CompositionServiceImpl(CompositionRepository compositionRepository) {
+        this.compositionRepository = compositionRepository;
+    }
+
     @Override
     public List<CompositionModel> findAll() {
         return compositionRepository.findAll();
