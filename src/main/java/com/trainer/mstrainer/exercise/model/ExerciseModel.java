@@ -7,16 +7,16 @@ import javax.persistence.Table;
 import java.util.UUID;
 
 @Entity
-@Table(name="exercise")
+@Table(name = "exercise")
 public class ExerciseModel {
 
     @Id
     private UUID id;
 
-    @Column(name= "photo_url")
+    @Column(name = "photo_url")
     private String photoUrl;
 
-    @Column(name= "group_exercise")
+    @Column(name = "group_exercise")
     private String groupExercise;
 
     public UUID getId() {

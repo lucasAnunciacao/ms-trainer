@@ -21,19 +21,19 @@ public class TrainingModel {
     @Id
     private UUID id;
 
-    @Column(name= "description")
+    @Column(name = "description")
     private String description;
 
-    @Column(name= "create_date")
+    @Column(name = "create_date")
     private Date createDate;
 
-    @Column(name= "frequency")
+    @Column(name = "frequency")
     private Integer frequency;
 
-    @Column(name= "client_id")
+    @Column(name = "client_id")
     private UUID client;
 
-    @Column(name= "professor_id")
+    @Column(name = "professor_id")
     private UUID professor;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "trainingModel"

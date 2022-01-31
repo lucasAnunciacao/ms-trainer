@@ -13,10 +13,10 @@ public class CompositionModel {
     @Id
     private UUID id;
 
-    @Column(name= "description")
+    @Column(name = "description")
     private String description;
 
-    @Column(name= "category")
+    @Column(name = "category")
     private String category;
 
     public UUID getId() {
@@ -40,6 +40,6 @@ public class CompositionModel {
     }
 
     public void setCategory(String category) {
-        category = category;
+        this.category = category;
     }
 }

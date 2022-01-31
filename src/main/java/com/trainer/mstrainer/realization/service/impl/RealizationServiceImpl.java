@@ -5,12 +5,17 @@ import com.trainer.mstrainer.realization.repository.RealizationRepository;
 import com.trainer.mstrainer.realization.service.RealizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 @Service
 public class RealizationServiceImpl implements RealizationService {
+
+    public RealizationServiceImpl(RealizationRepository realizationRepository) {
+        this.realizationRepository = realizationRepository;
+    }
 
     @Autowired
     private RealizationRepository realizationRepository;

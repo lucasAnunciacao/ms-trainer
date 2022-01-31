@@ -1,7 +1,6 @@
 package com.trainer.mstrainer.realization.model;
 
 import com.trainer.mstrainer.composition.model.CompositionModel;
-import com.trainer.mstrainer.exercise.model.ExerciseModel;
 import com.trainer.mstrainer.training.model.TrainingModel;
 
 import javax.persistence.Column;
@@ -29,10 +28,10 @@ public class RealizationModel {
     @JoinColumn(name = "composition_id", nullable = false, referencedColumnName = "id")
     private CompositionModel compositionModel;
 
-    @Column(name= "realization_date")
+    @Column(name = "realization_date")
     private Date realizationDate;
 
-    @Column(name= "client_id")
+    @Column(name = "client_id")
     private UUID clientId;
 
     public UUID getId() {

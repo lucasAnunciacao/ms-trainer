@@ -4,17 +4,19 @@ import com.trainer.mstrainer.execution.model.ExecutionModel;
 import com.trainer.mstrainer.execution.repository.ExecutionRepository;
 import com.trainer.mstrainer.execution.service.ExecutionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@Service
 public class ExecutionServiceImpl implements ExecutionService {
 
     @Autowired
     private ExecutionRepository executionRepository;
+
+    public ExecutionServiceImpl(ExecutionRepository executionRepository) {
+        this.executionRepository = executionRepository;
+    }
 
     @Override
     public List<ExecutionModel> findAll() {

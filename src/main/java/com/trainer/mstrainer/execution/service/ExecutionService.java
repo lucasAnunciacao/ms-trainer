@@ -10,7 +10,10 @@ import java.util.UUID;
 @Service
 public interface ExecutionService {
     List<ExecutionModel> findAll();
+
     Optional<ExecutionModel> findById(UUID id);
+
     ExecutionModel update(ExecutionModel executionModel);
+
     void delete(ExecutionModel executionModel);
 }

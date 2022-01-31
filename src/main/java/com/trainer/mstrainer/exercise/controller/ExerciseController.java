@@ -3,12 +3,15 @@ package com.trainer.mstrainer.exercise.controller;
 import com.trainer.mstrainer.exercise.model.ExerciseModel;
 import com.trainer.mstrainer.exercise.service.ExerciseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -45,6 +48,7 @@ public class ExerciseController {
         return ResponseEntity.ok(exerciseModelResponse);
     }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @RequestMapping(value = "/exercise/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable String id) {
         ExerciseModel exerciseModel = new ExerciseModel();
